@@ -1,0 +1,42 @@
+{%extends 'base.html'%}
+{%block content%}
+{%load static%}
+<section id="about" class="parallax-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-offset-1 col-md-10 col-sm-12">
+        <div class="about-info">
+                    <h3>{{intro.title}}</h3>
+          <h1>{{intro.content}}</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- PROJECT -->
+<section id="project" class="parallax-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-sm-6">
+        {%for image in images%} 
+        <div class="project-item">
+            <a href="" class="image-popup">
+            <img
+              src="{{image.image.url}}"
+              class="img-responsive"
+              alt=""
+            />
+            <div class="project-overlay">
+              <div class="project-info">
+                <h1>{{image.name}}</h1>
+                <h3>Click to pop up!</h3>
+              </div>
+            </div>
+          </a>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
