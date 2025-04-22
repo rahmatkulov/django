@@ -47,7 +47,7 @@
                 <div class="clearfix"></div>
                 <div class="col-md-offset-2 col-md-8 col-sm-12">
                     <!-- CONTACT FORM HERE -->
-                   <form action="{% url 'common:contact' %}" method="post" role="form">
+                   <form  method="post" role="form">
                         {% csrf_token %}
                         {% if messages %}
                         <ul class="messages">
@@ -63,21 +63,21 @@
                                    class="form-control"
                                    id="name"
                                    name="name"
-                                   placeholder="Name" />
+                                   placeholder="Name" required>
                         </div>
                         <div class="col-md-6 col-sm-6">
                             <input type="email"
                                    class="form-control"
                                    id="email"
                                    name="email"
-                                   placeholder="Email Address" />
+                                   placeholder="Email Address" requred>
                         </div>
                         <div class="col-md-12 col-sm-12">
                             <input type="text"
                                    class="form-control"
                                    id="cf-subject"
                                    name="subject"
-                                   placeholder="Subject" />
+                                   placeholder="Subject" requred>
                             <textarea class="form-control"
                                       rows="5"
                                       id="-message"
